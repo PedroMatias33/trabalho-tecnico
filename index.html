@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Shack - Loja de Calçados</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="brand-title">Shoe Shack</a>
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Pesquisar produtos...">
+            <img src="file (1) 1.png" alt="Carrinho" class="nav-icon" onclick="toggleCart()">
+        </div>
+    </nav>
+
+    <!-- Seção de Login/Cadastro -->
+    <div class="auth-container">
+        <h2>Login/Cadastro</h2>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <button id="register-toggle" onclick="toggleRegister()">Cadastre-se</button>
+        <form id="register-form" style="display:none;">
+            <input type="text" id="new-username" placeholder="Nome de usuário" required>
+            <input type="email" id="new-email" placeholder="Email" required>
+            <input type="password" id="new-password" placeholder="Senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <!-- Seção de Produtos Favoritos -->
+    <div class="favorites-container">
+        <h2>Produtos Favoritos</h2>
+        <div id="favorite-items"></div>
+    </div>
+
+    <!-- Interface de Administração -->
+    <div class="admin-panel">
+        <h2>Administração - Gerenciar Produtos</h2>
+        <form id="add-product-form">
+            <input type="text" id="product-name" placeholder="Nome do Produto" required>
+            <input type="number" id="product-price" placeholder="Preço" required>
+            <input type="url" id="product-image" placeholder="URL da Imagem" required>
+            <button type="submit">Adicionar Produto</button>
+        </form>
+
+        <h3>Lista de Produtos</h3>
+        <div id="product-list"></div>
+    </div>
+
+    <!-- Seção de Produtos -->
+    <div class="products-container" id="catalog">
+        <!-- Os produtos adicionados aparecerão aqui -->
+    </div>
+
+    <!-- Carrinho de Compras -->
+    <div id="cart" class="cart">
+        <h2>Carrinho</h2>
+        <div id="cart-items"></div>
+        <button onclick="finalizePurchase()">Finalizar Compra</button>
+    </div>
+    
+</body>
+</html>
